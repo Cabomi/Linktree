@@ -23,16 +23,17 @@ a img.icon {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
   height: 100vh; /* Utiliser 100% de la hauteur de la vue */
   margin: 40px; /* Ajouter une marge extérieure de 20 pixels */
-  flex-shrink: 3;
+  
 }
 
 
 .rectangle-blanc {
-  width: calc(100% - 40px);
+  box-sizing: border-box; 
+   width: calc(100% - 40px);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -41,7 +42,7 @@ a img.icon {
     border-radius: 20px;
     padding: 20px;
     z-index: 1;
-    flex-grow: 1;
+    overflow: hidden;
 }
 
 .profil-container {
@@ -49,10 +50,8 @@ a img.icon {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
   z-index: 3;
-  
-
+  margin-bottom: 100px;
 }
 
 .Profile-Picture {
@@ -66,7 +65,6 @@ a img.icon {
 }
 
 .Profile-Name {
- 
   font-size: 25px;
   font-weight: 100;
   position: relative;
@@ -87,31 +85,36 @@ a img.icon {
   text-transform: none;
 }
 
+.About-us p:first-child {
+  font-weight: bold;
+  font-size: 1.2em; /* Ajustez la taille du texte selon vos préférences */
+  text-decoration: underline;
+  text-align: center;
+}
+
 .About-us {
   text-align: justify;
   margin: auto;
-  max-width: 600px;
-  font-size: 12px;
+  max-width: 480px;
+  font-size: 14px;
   font-weight: 100;
   position: relative;
   text-transform: lowercase;
   font-family: 'Alga' , serif;
   z-index: 3;
- text-transform: none;
- margin-top: 20px;
+  text-transform: none;
+  margin-top: 20px;
 }
 
 .button-container {
   display: flex;
-  flex-grow: 1;
   flex-direction: column;
-  width: 110%;
+  width: 100%;
   gap: 20px;
-  margin-bottom: 20px;
   flex-shrink: 1;
-
-
-
+  margin-top: 100px;
+  position: relative;
+  bottom: 20px;
 }
 
 .unique-button {
@@ -144,12 +147,12 @@ a img.icon {
 
 .unique-button span {
   display: block;
-  margin-left: 0.3em;
+  margin-left: 1em;
   transition: all 0.3s ease-in-out;
 }
 
 .unique-button:hover span {
-  transform: translateX(10em);
+  transform: translateX(30em);
 }
 
 .unique-button:hover .svg-wrap {
@@ -164,7 +167,7 @@ a img.icon {
 }
 
 .unique-button:hover svg {
-  transform: translateX(2.5em) rotate(45deg) scale(1.2);
+  transform: translateX(6.5em) rotate(45deg) scale(1.2);
 }
 
 .unique-button:active {
