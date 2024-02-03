@@ -42,8 +42,7 @@ a img.icon {
     border-radius: 20px;
     padding: 20px;
     z-index: 1;
-  min-height: 850px;
-  min-width: 350px;
+    overflow: hidden;
 }
 
 .profil-container {
