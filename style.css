@@ -1,10 +1,4 @@
 html {
-    /*FONT:*/   
-    font-family: var(--font);
-    color: var(--textColor);
-    font-size: 18px; 
-    font-weight: 400;
-
     /*BACKGROUND:*/
     background-color: #f4e6d4;
     height: 100%;
@@ -87,8 +81,8 @@ h1, h2 {
   margin: 0;
 }
 
-p{
-  font-size: 14px;
+#quote {
+  font-size: 13px;
   font-weight: 100;
   position: relative;
   text-transform: none;
@@ -171,6 +165,160 @@ p{
     box-shadow: inset 0 0 0 10em rgb(141,43,80);
   }
 
+  .animated-border-box, .animated-border-box-glow{
+    margin: auto;
+    position: relative;
+    overflow: hidden; 
+    z-index: 0;
+    /* Border Radius */
+    border-radius: 10px;
+  }
+  
+  .animated-border-box-glow {
+    overflow: hidden;
+    filter: blur(20px);
+  }
+  
+  .animated-border-box:before, .animated-border-box-glow:before {
+    content: '';
+    z-index: -2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    position: absolute;
+    width: 99999px;
+    height: 99999px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    /*border color, change middle color*/
+    background-image: conic-gradient(rgba(255, 255, 255, 0), #8AA74B, rgba(255, 255, 255, 0) 25%);
+    /* change speed here */
+    animation: rotate 4s linear infinite;
+  }
+  
+  .animated-border-box:after {
+      
+	content: '';
+	position: absolute;
+	z-index: -1;
+  /* border width */
+	left: 5px;
+	top: 5px;
+  /* double the px from the border width left */
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+  /*bg color*/
+	background: #292a2e;
+  /*box border radius*/
+	border-radius: 7px;
+	
+  }
+  
+  @keyframes rotate {
+    100% {
+      transform: translate(-50%, -50%) rotate(1turn);
+    }
+  }
+  
+  #code-editor {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(4px);
+  display: none;
+  }
+  
+  #code-editor:target {
+  display: block;
+  }
+  
+  .code {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px 25px 25px 25px;
+  }
+
+  
+  #header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction : row;
+    margin: 20px;
+    height: 5px;
+  }
+  
+  .title {
+    font-family: Lato, sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    letter-spacing: 1.57px;
+    color: rgb(212 212 212);
+  }
+  
+  .icon {
+    width: 20px;
+    transition: .2s ease;
+  }
+  
+  .icon:hover {
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: #6e7281;
+  }
+  
+  .editor-content {	
+  max-width: 80%;
+  width: 400px;
+  transform: translate(-50%, -50%);
+  background-color: #1d1e22;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  }
+
+  
+  .property {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 40px;
+  }
+  
+  .property:hover {
+    cursor: text;
+  }
+  
+  .editor-content .color-0 {
+    color: rgb(86 156 214);
+  }
+  
+  .editor-content .color-1 {
+    color: rgb(182 206 168);
+  }
+  
+  .editor-content .color-2 {
+    color: rgb(156 220 254);
+  }
+  
+  .editor-content .color-3 {
+    color: rgb(207 146 120);
+  }
+  
+  .color-preview-1 {
+    background-color: #1d1e22;
+  }
+  
+  .color-preview-1 {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
   
 .cta-container {
   position: relative;
@@ -242,38 +390,6 @@ p{
   transform: scale(0.95);
 }
 
-#box{
-position: fixed;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-background-color: transparent;
-display: none;
-}
-
-#box:target {
-display: block;
-}
-
-#modale{
-background-color: #ffffff;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-padding: 15px;
-border-radius: 6px;
-width: 400px;
-max-width: 80%;
-}
-
-#modale a {
-color: rgb(141,43,80);
-position: absolute;
-top: 15px;
-right: 15px;
-}
 
 a {
   /*LINKS TEXT*/
@@ -293,4 +409,29 @@ a {
     width: calc(100% - 40px);
   }
   }
+}
+
+@keyframes slice {
+  0% {
+ transform: rotate(0deg);
+}
+100% {
+ transform: rotate(360deg);
+}
+}
+.out-top {
+animation: slice 20s linear infinite;
+transform-origin: 13px 25px;
+}
+.in-top {
+animation: slice 10s linear infinite;
+transform-origin: 13px 25px;
+}
+.out-bottom {
+animation: slice 25s linear infinite;
+transform-origin: 84px 93px;
+}
+.in-bottom {
+animation: slice 15s linear infinite;
+transform-origin: 84px 93px;
 }
