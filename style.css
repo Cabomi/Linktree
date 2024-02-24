@@ -396,6 +396,7 @@ a {
   /*LINKS TEXT*/
   color: var(--textColor);
   text-decoration: none;
+  
 }
 
 /* Media query pour les écrans de 500 pixels ou moins */
