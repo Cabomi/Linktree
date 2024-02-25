@@ -14,7 +14,6 @@ html {
   src: url('AL-NEVRADA.ttf');
 }
 
-
 svg.test {
     position: fixed;
     top: 0;
@@ -493,4 +492,78 @@ transform-origin: 84px 93px;
 .in-bottom {
 animation: slice 15s linear infinite;
 transform-origin: 84px 93px;
+}
+
+
+.cls-1 {
+  fill: #2f374a;
+}                
+.cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24 {
+  stroke-width: 0px;
+}                
+.cls-2 {
+  fill: #eea233;
+}                
+.cls-3 {
+  fill: #2f3a4c;
+}                
+.cls-4 {
+  fill: #e5872e;
+}                
+.cls-6 {
+  fill: #2f3b50;
+}                
+.cls-7 {
+  fill: #974b20;
+}                
+.cls-8 {
+  fill: #f2aa41;
+}                
+.cls-9 {
+  fill: #de7f03;
+}                
+.cls-10 {
+  fill: #ffcae4;
+}                
+.cls-11 {
+  fill: #331313;
+}                
+.cls-12 {
+  fill: #fff;
+}                
+.cls-13 {
+  fill: #954c1f;
+}                
+.cls-14 {
+  fill: #331414;
+}                
+.cls-15 {
+  fill: #e48a2d;
+}                
+.cls-16 {
+  fill: #321313;
+}                
+.cls-17 {
+  fill: #133441;
+}                
+.cls-18 {
+  fill: #984e20;
+}                
+.cls-19 {
+  fill: #f6e7ab;
+}                
+.cls-20 {
+  fill: #ea9830;
+}                
+.cls-21 {
+  fill: #311117;
+}                
+.cls-22 {
+  fill: #e48931;
+}                
+.cls-23 {
+  fill: #e48e30;
+}                
+.cls-24 {
+  fill: #ee9b04;
 }
