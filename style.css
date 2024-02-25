@@ -399,6 +399,63 @@ a {
   
 }
 
+.toggle-contain {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  margin-top:30px;
+  margin-right:20px;
+  justify-content:right;
+  background: var(--bg);
+}
+
+svg#toggle {
+  transform: scale(.11);
+  position: absolute;
+
+  pointer-events: none;
+  z-index: 3;
+}
+
+#donut-rolling-face {
+  opacity: 0;
+}
+
+a#a-toggle {
+  position: absolute;
+  outline: none;
+}
+
+#btnOn {
+  width: 72px;
+  height: 24px;
+  background-image: url("Flag.png");
+  background-size: cover;
+  background-position: center;
+  background-color: #FAF1E6;
+  border: 1.5px solid hsla(44, 98%, 68%, 1);
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+#btnOff {
+  width: 72px;
+  height: 24px;
+  background-image: url("FlAg.png");
+  background-position: center;
+  background-size: cover;
+  background-color: #FFEFBD;
+  border: 1.5px solid hsla(44, 98%, 68%, 1);
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+
+
 /* Media query pour les écrans de 500 pixels ou moins */
 @media screen and (max-width: 395px) {
   .button {
