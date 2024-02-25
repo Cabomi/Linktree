@@ -156,3 +156,35 @@ $("#btnOff").click(function(){
   gsap.to("#donut-arm-r", 1, {x: 0, scale: 1, ease: Power1.easeInOut});
   }, 1800);
 });
+
+document.getElementById('btnOff').addEventListener('click', function() {
+  chargerContenu('index.html');
+});
+
+document.getElementById('btnOn').addEventListener('click', function() {
+  chargerContenu('index.de.html');
+});
+
+function chargerContenu(url) {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        var response = xhr.responseText;
+        var parser = new DOMParser();
+        var htmlDoc = parser.parseFromString(response, 'text/html');
+
+        var nouveauQuote = htmlDoc.getElementById('quote').innerHTML;
+        var nouveauCode = htmlDoc.getElementById('code-editor').innerHTML;
+
+        // Met à jour le contenu de la page avec les données de la langue choisie
+        document.getElementById('quote').innerHTML = nouveauQuote;
+        document.getElementById('code-editor').innerHTML = nouveauCode;
+      } else {
+        console.error('Erreur de chargement du contenu');
+      }
+    }
+  };
+  xhr.open('GET', url, true);
+  xhr.send();
+}
