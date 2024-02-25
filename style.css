@@ -301,6 +301,7 @@ h1, h2 {
   
   .editor-content .color-1 {
     color: rgb(182 206 168);
+    text-transform: none;
   }
   
   .editor-content .color-2 {
